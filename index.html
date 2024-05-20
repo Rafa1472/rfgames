@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+
+    <title>RFGames</title>
+</head>
+
+<body>
+    <header>
+        <div class="topo">
+            <p><span>RF</span>Games</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Meus Jogos:</h1>
+            <div data-product class="container-produto">
+
+            </div>
+        </section>
+
+        <section>
+            <h1>Adicionar Jogo:</h1>
+            <form class="container-form" data-form>
+                <input data-name placeholder="nome..." type="text">
+                <input data-price placeholder="valor..." type="text">
+                <input data-image placeholder="imagem..." type="text">
+
+                <div class="button-container">
+                    <button type="submit" class="btn-submit" id="btn">Enviar</button>
+                    <button type="reset" class="btn-reset" id="btn">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por &copy;RFGames</p>
+    </footer>
+
+    <script type="module" src="./js/controllers/main.js"></script>
+</body>
+
+</html>
