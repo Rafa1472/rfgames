@@ -73,7 +73,7 @@ main section h1 {
 }
 
 .container-produto {
-    overflow-y: scroll;
+    overflow: auto;
     max-width: 650px;  
     height: 80vh;
     margin-top: 20px;
@@ -269,6 +269,7 @@ footer p {
 
     .container-produto {
         max-width: 400px;
+        height: 40vh;
     }
 
     .card {
