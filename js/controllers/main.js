@@ -22,8 +22,8 @@ function createElement(name, price, image, id) {
                 </div>
             </div>
         </div>
+    `;
 
-    `
     const deleteButton = card.querySelector('.button-lixeira');
     deleteButton.addEventListener('click', async () => {
         await servicesProducts.deleteCard(id);
@@ -36,15 +36,17 @@ function createElement(name, price, image, id) {
 const render = async () => {
     try {
         const listProduct = await servicesProducts.productList();
-        
         listProduct.forEach((product) => {
             productContainer.appendChild(createElement(product.name, product.price, product.image, product.id));
         });
-
     } catch (error) {
         console.log(error)
     }
 };
+
+servicesProducts.productsArray.forEach((product) => {
+    productContainer.appendChild(createElement(product.name, product.price, product.image, product.id));
+});
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();

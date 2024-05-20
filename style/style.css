@@ -50,7 +50,7 @@ header {
 }
 
 main {
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -73,10 +73,12 @@ main section h1 {
 }
 
 .container-produto {
-    overflow: auto;
+    overflow-y: scroll;
     max-width: 650px;  
-    height: 80vh;
+    height: 50vh;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -88,6 +90,7 @@ main section h1 {
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px;
+    height: 20vh;
 }
 
 .card-container {

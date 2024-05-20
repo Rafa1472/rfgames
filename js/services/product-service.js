@@ -11,9 +11,9 @@ const createProduct = (name, price, image) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            name,
-            price,
-            image,
+            name: name,
+            price: price,
+            image: image,
         })
     })
     .then((res) => res.json())
@@ -34,8 +34,18 @@ async function deleteCard(id) {
     }
 }
 
+const productsArray = [
+    {
+      "name": "nome do jogo",
+      "price": "valor do jogo",
+      "image": "https://img.freepik.com/vetores-gratis/astronauta-bonito-esfregando-na-ilustracao-do-icone-do-vetor-dos-desenhos-animados-do-controlador-de-jogo-conceito-de-icone-de-recreacao-de-tecnologia-isolado-vetor-premium-estilo-flat-cartoon_138676-3715.jpg",
+      "id": 1
+    }
+];
+
 export const servicesProducts = {
     productList,
     createProduct,
     deleteCard,
+    productsArray
 }
